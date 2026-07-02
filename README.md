@@ -43,17 +43,12 @@ Client ──POST /chat──▶ FastAPI ──▶ Agent
 pip install -r requirements.txt
 ```
 
-### 2. Set your Gemini API key
+### 2. Configure environment variables
 
-```bash
-# Linux / macOS
-export GEMINI_API_KEY="your-api-key-here"
+Create a `.env` file in the root of the project directory:
 
-# Windows (PowerShell)
-$env:GEMINI_API_KEY = "your-api-key-here"
-
-# Windows (CMD)
-set GEMINI_API_KEY=your-api-key-here
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
 ### 3. Run the server
@@ -61,6 +56,7 @@ set GEMINI_API_KEY=your-api-key-here
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
+
 
 On first startup the service will:
 1. Download the SHL catalog JSON (~2s)
